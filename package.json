@@ -1,13 +1,12 @@
 {
-  "name": "blog-server",
+  "name": "blog",
   "version": "1.0.0",
-  "description": "My blog server",
+  "description": "My blog",
+  "author": "Eugene S. <sl0vv.me@gmail.com>",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server"
   },
-  "author": "Eugene S.",
-  "license": "MIT",
   "_moduleAliases": {
     "@root": ".",
     "@config": "./server/db_config.js"
