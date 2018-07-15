@@ -4,8 +4,8 @@ const api = {}
 
 api.getList = (params = {}) => (req, res) => {
   Post.find(params, (err, posts) => {
-    if (err) return res.status(400).json({ succes: false })
-    res.status(200).json(posts)
+    if (err) return res.status(400).send({ succes: false })
+    res.status(200).send(posts)
   })
 }
 

@@ -16,8 +16,8 @@ module.exports = (app) => {
         })  
 
         post.save(err => {
-          if (!err) return res.status(200).json({ success: true })
-          res.status(400).json({ succes: false })
+          if (!err) return res.status(200).send({ success: true })
+          res.status(400).send({ succes: false })
         })
       })
 
@@ -26,9 +26,9 @@ module.exports = (app) => {
         const id = req.params.id
 
         Post.find({_id: id}, (err, post) => {
-          if (err) return res.status(400).json({ succes: false })
+          if (err) return res.status(400).send({ succes: false })
           console.log(post.id)
-          res.status(200).json(post)
+          res.status(200).send(post)
         })
       })
 }
