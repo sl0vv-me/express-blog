@@ -1,13 +1,28 @@
 <template>
   <div id="app">
-    <header>
-      Header
+    <header class="main">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-auto">
+            Очередной блог
+          </div>
+          <div class="col-auto">
+            Очередной блог
+          </div>
+        </div>
+      </div>
     </header>
-    <main>
+    <main class="main">
       <router-view/>
     </main>
-    <footer>
-
+    <footer class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            Подвал
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
 </template>

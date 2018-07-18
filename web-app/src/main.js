@@ -15,7 +15,6 @@ const apiAxios = axios.create({
   validateStatus: null
 })
 apiAxios.interceptors.request.use(req => {
-  // Do something before request is sent
   req.data = qs.stringify(req.data)
   return req;
 });
@@ -25,8 +24,6 @@ Vue.use(VueAxios, apiAxios)
 new Vue({
   el: '#app',
   router,
-  components: { 
-    App
-  },
+  components: { App },
   template: '<App/>'
 })
