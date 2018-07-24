@@ -9,15 +9,17 @@
   },
   "_moduleAliases": {
     "@root": ".",
-    "@config": "./server/db_config.js"
+    "@config": "./server/config.js"
   },
   "dependencies": {
     "bcrypt": "^2.0.1",
     "body-parser": "^1.18.3",
+    "connect-mongo": "^2.0.1",
     "consign": "^0.1.6",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
     "express-jwt": "^5.3.1",
+    "express-session": "^1.15.6",
     "jsonwebtoken": "^8.3.0",
     "module-alias": "^2.1.0",
     "mongoose": "^5.1.7",

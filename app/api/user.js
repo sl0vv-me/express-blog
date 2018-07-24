@@ -29,7 +29,7 @@ api.login = _ => (req, res) => {
 
     user.comparePassword(req.body.password, (err, matches) => {
       if (matches && !err) {
-        const token = jwt.sign({ user }, config.secret)
+        const token = jwt.sign({ user }, config('password_secret'))
         let expireTime = new Date(Date.now() + 1800000)
 
         res.cookie('token', token, { expires: expireTime, httpOnly: true })

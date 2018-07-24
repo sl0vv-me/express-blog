@@ -2,7 +2,7 @@ module.exports = (mongoose, config) => {
   const database = mongoose.connection
 
   mongoose.Promise = Promise
-  mongoose.connect(config.database, {
+  mongoose.connect(config('database'), {
     promiseLibrary: global.Promise
   })
 
@@ -16,4 +16,6 @@ module.exports = (mongoose, config) => {
       process.exit(0)
     })
   })
+
+  return mongoose
 }
